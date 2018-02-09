@@ -8,6 +8,15 @@ const getBooks = function () {
   })
 }
 
+const updateBook = function (data, bookId) {
+  return $.ajax({
+    url: config.apiOrigin + '/books/' + bookId,
+    method: 'PATCH',
+    data
+  })
+}
+
 module.exports = {
-  getBooks
+  getBooks,
+  updateBook
 }

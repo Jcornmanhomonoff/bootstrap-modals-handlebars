@@ -1,16 +1,9 @@
 {{#each books as |book|}}
+<!-- Button trigger modal -->
+<br>
 
-  <!-- {{> partial}}
-  Don't uncomment yet -->
-
- <!-- Developers, why are we using data-id and not just id? -->
-  <h1 data-id="{{book.id}}"> <small>Title: {{book.title}}</small></h1>
-  <div>
-    {{#if book.author}}
-      {{book.author}}
-    {{else}}
-      No author provided.
-    {{/if}}
-  </div>
+<button type="button" class="btn btn-primary modal-btn" data-id={{book.id}}>
+  {{book.title}}
+</button>
 
 {{/each}}
